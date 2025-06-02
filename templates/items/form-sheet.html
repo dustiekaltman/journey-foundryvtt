@@ -1,0 +1,65 @@
+<form class="astro-inferno form-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="itemname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Form Name" />
+            </h1>
+        </div>
+    </header>
+
+    <section class="sheet-body">
+        <div class="form-description">
+            <h2>Description</h2>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+
+        <div class="form-attributes">
+            <h2>Attribute Modifiers</h2>
+            <div class="attributes-grid">
+                {{#each system.attributes as |value key|}}
+                <div class="attribute">
+                    <label>{{key}}</label>
+                    <input type="number" name="system.attributes.{{key}}" value="{{value}}" />
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="form-abilities">
+            <h2>Abilities</h2>
+            <div class="abilities-list">
+                {{#each system.abilities as |ability index|}}
+                <div class="ability" data-index="{{index}}">
+                    <div class="ability-header">
+                        <input type="text" name="system.abilities.{{index}}.name" value="{{ability.name}}" placeholder="Ability Name" />
+                        <a class="ability-control ability-delete" title="Delete Ability"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="ability-description">
+                        <textarea name="system.abilities.{{index}}.description" placeholder="Ability Description">{{ability.description}}</textarea>
+                    </div>
+                </div>
+                {{/each}}
+                <a class="ability-control ability-add" title="Add Ability"><i class="fas fa-plus"></i> Add Ability</a>
+            </div>
+        </div>
+
+        <div class="form-traits">
+            <h2>Traits</h2>
+            <div class="traits-list">
+                {{#each system.traits as |trait index|}}
+                <div class="trait" data-index="{{index}}">
+                    <div class="trait-header">
+                        <input type="text" name="system.traits.{{index}}.name" value="{{trait.name}}" placeholder="Trait Name" />
+                        <a class="trait-control trait-delete" title="Delete Trait"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="trait-description">
+                        <textarea name="system.traits.{{index}}.description" placeholder="Trait Description">{{trait.description}}</textarea>
+                    </div>
+                </div>
+                {{/each}}
+                <a class="trait-control trait-add" title="Add Trait"><i class="fas fa-plus"></i> Add Trait</a>
+            </div>
+        </div>
+    </section>
+</form> 

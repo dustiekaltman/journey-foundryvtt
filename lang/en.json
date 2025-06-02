@@ -1,0 +1,12 @@
+{
+    "YOUR_MODULE": {
+        "TITLE": "Your Module Title",
+        "DESCRIPTION": "A description of your module",
+        "SETTINGS": {
+            "EXAMPLE_SETTING": {
+                "NAME": "Example Setting",
+                "HINT": "This is an example setting"
+            }
+        }
+    }
+} 

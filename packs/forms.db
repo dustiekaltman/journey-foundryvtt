@@ -1,0 +1,39 @@
+{
+    "id": "forms",
+    "name": "Forms",
+    "path": "packs/forms.db",
+    "type": "Item",
+    "private": false,
+    "system": "astro-inferno",
+    "items": [
+        {
+            "_id": "form.human",
+            "name": "Human",
+            "type": "form",
+            "img": "systems/astro-inferno/assets/icons/human.svg",
+            "system": {
+                "description": "Humans are adaptable and versatile, able to excel in any role they choose.",
+                "attributes": {
+                    "strength": 0,
+                    "dexterity": 0,
+                    "constitution": 0,
+                    "intelligence": 0,
+                    "wisdom": 0,
+                    "charisma": 0
+                },
+                "abilities": [
+                    {
+                        "name": "Versatile",
+                        "description": "Humans gain an additional story point at the start of each session."
+                    }
+                ],
+                "traits": [
+                    {
+                        "name": "Adaptable",
+                        "description": "Humans can choose one additional destiny feature when they level up."
+                    }
+                ]
+            }
+        }
+    ]
+} 

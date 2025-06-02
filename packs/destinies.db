@@ -1,0 +1,38 @@
+{
+    "id": "destinies",
+    "name": "Destinies",
+    "path": "packs/destinies.db",
+    "type": "Item",
+    "private": false,
+    "system": "astro-inferno",
+    "items": [
+        {
+            "_id": "destiny.warrior",
+            "name": "Warrior",
+            "type": "destiny",
+            "img": "systems/astro-inferno/assets/icons/warrior.svg",
+            "system": {
+                "description": "Warriors are masters of combat, using their strength and skill to overcome challenges.",
+                "level": 1,
+                "features": [
+                    {
+                        "name": "Combat Training",
+                        "description": "Warriors are proficient with all weapons and armor.",
+                        "level": 1
+                    },
+                    {
+                        "name": "Battle Focus",
+                        "description": "Warriors can spend a story point to gain advantage on their next attack roll.",
+                        "level": 1
+                    }
+                ],
+                "proficiencies": {
+                    "skills": ["athletics", "intimidation"],
+                    "tools": ["smith's tools"],
+                    "weapons": ["simple", "martial"],
+                    "armor": ["light", "medium", "heavy"]
+                }
+            }
+        }
+    ]
+} 

@@ -1,0 +1,96 @@
+<form class="astro-inferno destiny-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="itemname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Destiny Name" />
+            </h1>
+            <div class="destiny-level">
+                <label>Level</label>
+                <input type="number" name="system.level" value="{{system.level}}" min="1" />
+            </div>
+        </div>
+    </header>
+
+    <section class="sheet-body">
+        <div class="destiny-description">
+            <h2>Description</h2>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+
+        <div class="destiny-features">
+            <h2>Features</h2>
+            <div class="features-list">
+                {{#each system.features as |feature index|}}
+                <div class="feature" data-index="{{index}}">
+                    <div class="feature-header">
+                        <input type="text" name="system.features.{{index}}.name" value="{{feature.name}}" placeholder="Feature Name" />
+                        <input type="number" name="system.features.{{index}}.level" value="{{feature.level}}" min="1" placeholder="Level" />
+                        <a class="feature-control feature-delete" title="Delete Feature"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="feature-description">
+                        <textarea name="system.features.{{index}}.description" placeholder="Feature Description">{{feature.description}}</textarea>
+                    </div>
+                </div>
+                {{/each}}
+                <a class="feature-control feature-add" title="Add Feature"><i class="fas fa-plus"></i> Add Feature</a>
+            </div>
+        </div>
+
+        <div class="destiny-proficiencies">
+            <h2>Proficiencies</h2>
+            
+            <div class="proficiency-group">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    {{#each system.proficiencies.skills as |skill index|}}
+                    <div class="skill" data-index="{{index}}">
+                        <input type="text" name="system.proficiencies.skills.{{index}}" value="{{skill}}" placeholder="Skill Name" />
+                        <a class="skill-control skill-delete" title="Delete Skill"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/each}}
+                    <a class="skill-control skill-add" title="Add Skill"><i class="fas fa-plus"></i> Add Skill</a>
+                </div>
+            </div>
+
+            <div class="proficiency-group">
+                <h3>Tools</h3>
+                <div class="tools-list">
+                    {{#each system.proficiencies.tools as |tool index|}}
+                    <div class="tool" data-index="{{index}}">
+                        <input type="text" name="system.proficiencies.tools.{{index}}" value="{{tool}}" placeholder="Tool Name" />
+                        <a class="tool-control tool-delete" title="Delete Tool"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/each}}
+                    <a class="tool-control tool-add" title="Add Tool"><i class="fas fa-plus"></i> Add Tool</a>
+                </div>
+            </div>
+
+            <div class="proficiency-group">
+                <h3>Weapons</h3>
+                <div class="weapons-list">
+                    {{#each system.proficiencies.weapons as |weapon index|}}
+                    <div class="weapon" data-index="{{index}}">
+                        <input type="text" name="system.proficiencies.weapons.{{index}}" value="{{weapon}}" placeholder="Weapon Type" />
+                        <a class="weapon-control weapon-delete" title="Delete Weapon"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/each}}
+                    <a class="weapon-control weapon-add" title="Add Weapon"><i class="fas fa-plus"></i> Add Weapon</a>
+                </div>
+            </div>
+
+            <div class="proficiency-group">
+                <h3>Armor</h3>
+                <div class="armor-list">
+                    {{#each system.proficiencies.armor as |armor index|}}
+                    <div class="armor" data-index="{{index}}">
+                        <input type="text" name="system.proficiencies.armor.{{index}}" value="{{armor}}" placeholder="Armor Type" />
+                        <a class="armor-control armor-delete" title="Delete Armor"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/each}}
+                    <a class="armor-control armor-add" title="Add Armor"><i class="fas fa-plus"></i> Add Armor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</form> 

@@ -1,0 +1,18 @@
+/* Your Module Styles */
+
+.your-module-class {
+    /* Add your custom styles here */
+}
+
+/* Example styles for module UI elements */
+.your-module-dialog {
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.your-module-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+} 

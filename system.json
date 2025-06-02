@@ -1,0 +1,67 @@
+{
+    "id": "astro-inferno",
+    "title": "Astro Inferno D20",
+    "description": "A journey experience system built upon storytelling. A simple way to create an epic record of the player's epic (and painful) odyssey",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13",
+        "maximum": "13"
+    },
+    "authors": [
+        {
+            "name": "Dustie Kaltman",
+            "url": "https://github.com/dustiekaltman"
+        }
+    ],
+    "esmodules": [
+        "scripts/mysystem.mjs",
+        "scripts/actor/character.js",
+        "scripts/items/form.js",
+        "scripts/items/destiny.js",
+        "scripts/dice/story-points.js"
+    ],
+    "styles": [
+        "styles/system.css",
+        "styles/character-sheet.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": true,
+    "initiative": "1d20",
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "attributes.hp",
+    "secondaryTokenAttribute": "attributes.sp",
+    "packs": [
+        {
+            "name": "forms",
+            "label": "Forms",
+            "path": "packs/forms.db",
+            "type": "Item",
+            "system": "astro-inferno"
+        },
+        {
+            "name": "destinies",
+            "label": "Destinies",
+            "path": "packs/destinies.db",
+            "type": "Item",
+            "system": "astro-inferno"
+        }
+    ],
+    "url": "https://github.com/dustiekaltman/astro-inferno",
+    "manifest": "https://raw.githubusercontent.com/dustiekaltman/astro-inferno/main/system.json",
+    "download": "https://github.com/dustiekaltman/astro-inferno/releases/latest/download/system.zip",
+    "license": "LICENSE.txt",
+    "readme": "README.md",
+    "bugs": "https://github.com/dustiekaltman/astro-inferno/issues",
+    "changelog": "CHANGELOG.md",
+    "flags": {
+        "allowBugReporter": true
+    }
+} 
