@@ -1,8 +1,8 @@
 {
-    "id": "astro-inferno",
+    "id": "journey-foundryvtt",
     "title": "Astro Inferno D20",
     "description": "A journey experience system built upon storytelling. A simple way to create an epic record of the player's epic (and painful) odyssey",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "compatibility": {
         "minimum": "13",
         "verified": "13",
@@ -44,22 +44,22 @@
             "label": "Forms",
             "path": "packs/forms.db",
             "type": "Item",
-            "system": "astro-inferno"
+            "system": "journey-foundryvtt"
         },
         {
             "name": "destinies",
             "label": "Destinies",
             "path": "packs/destinies.db",
             "type": "Item",
-            "system": "astro-inferno"
+            "system": "journey-foundryvtt"
         }
     ],
-    "url": "https://github.com/dustiekaltman/astro-inferno",
-    "manifest": "https://raw.githubusercontent.com/dustiekaltman/astro-inferno/main/system.json",
-    "download": "https://github.com/dustiekaltman/astro-inferno/releases/latest/download/system.zip",
+    "url": "https://github.com/dustiekaltman/journey-foundryvtt",
+    "manifest": "https://raw.githubusercontent.com/dustiekaltman/journey-foundryvtt/system.json",
+    "download": "https://github.com/dustiekaltman/journey-foundryvtt/releases/latest/download/astro-inferno.zip",
     "license": "LICENSE.txt",
     "readme": "README.md",
-    "bugs": "https://github.com/dustiekaltman/astro-inferno/issues",
+    "bugs": "https://github.com/dustiekaltman/journey-foundryvtt/issues",
     "changelog": "CHANGELOG.md",
     "flags": {
         "allowBugReporter": true

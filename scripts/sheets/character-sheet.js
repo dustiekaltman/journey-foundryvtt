@@ -1,8 +1,8 @@
 export class CharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["astro-inferno", "sheet", "actor", "character"],
-            template: "systems/astro-inferno/templates/actor/character-sheet.html",
+            classes: ["journey-foundryvtt", "sheet", "actor", "character"],
+            template: "systems/journey-foundryvtt/templates/actor/character-sheet.html",
             width: 720,
             height: 680,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes"}],

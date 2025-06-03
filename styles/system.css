@@ -1,10 +1,10 @@
-/* Astro Inferno D20 System Styles */
+/* Journey D20 System Styles */
 
 /* ----------------------------------------- */
-/*  All Astro Inferno                        */
+/*  All Journey                               */
 /* ----------------------------------------- */
 
-.astro-inferno {
+.journey-foundryvtt {
     /* Sheet Tabs */
     .sheet-tabs {
         flex: 0 0 40px;

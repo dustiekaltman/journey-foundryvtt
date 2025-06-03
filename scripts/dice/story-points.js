@@ -7,7 +7,7 @@ export class StoryPoints {
      */
     static init() {
         // Story points system initialized
-        console.log('Astro Inferno | Story Points system initialized');
+        console.log('Journey | Story Points system initialized');
     }
 
     /**
@@ -16,7 +16,7 @@ export class StoryPoints {
      * @returns {Promise<ChatMessage>}
      */
     static async createStoryPointMessage(actor) {
-        const content = await renderTemplate('systems/astro-inferno/templates/chat/story-point.html', {
+        const content = await renderTemplate('systems/journey-foundryvtt/templates/chat/story-point.html', {
             actor: actor,
             storyPoints: actor.system.attributes.storyPoints,
             maxStoryPoints: actor.system.attributes.maxStoryPoints
@@ -38,7 +38,7 @@ export class StoryPoints {
      */
     static async spendPoint(actor, reason = "General use") {
         if (await actor.spendStoryPoint()) {
-            const content = await renderTemplate('systems/astro-inferno/templates/chat/story-point-spent.html', {
+            const content = await renderTemplate('systems/journey-foundryvtt/templates/chat/story-point-spent.html', {
                 actor: actor,
                 reason: reason,
                 storyPoints: actor.system.attributes.storyPoints

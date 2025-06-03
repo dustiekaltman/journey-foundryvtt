@@ -1,4 +1,4 @@
-# Astro Inferno D20
+# Journey D20 (tidigare Astro Inferno D20)
 
 A journey experience system built upon storytelling. A simple way to create an epic record of the player's epic (and painful) odyssey.
 
@@ -29,10 +29,25 @@ A journey experience system built upon storytelling. A simple way to create an e
 
 ## Installation
 
+### Option 1: Install from URL
 1. In Foundry VTT, navigate to the "Add-on Modules" tab
 2. Click "Install System"
-3. Enter the following URL: `https://github.com/dustiekaltman/astro-inferno/releases/latest/download/system.json`
+3. Enter the following URL: `https://github.com/dustiekaltman/journey-foundryvtt/releases/latest/download/system.json`
 4. Click "Install"
+
+### Option 2: Local Installation (Recommended for Development)
+1. Clone or download this repository
+2. Copy the entire folder to your Foundry's systems directory:
+   - macOS: `~/Library/Application Support/FoundryVTT/Data/systems/`
+   - Windows: `%appdata%/FoundryVTT/Data/systems/`
+   - Linux: `~/.local/share/FoundryVTT/Data/systems/`
+3. Rename the folder to `journey-foundryvtt`
+4. Restart Foundry VTT
+
+### Option 3: Symbolic Link (Best for Development)
+```bash
+ln -s /path/to/your/journey-foundryvtt ~/Library/Application\ Support/FoundryVTT/Data/systems/journey-foundryvtt
+```
 
 ## System Requirements
 
@@ -43,7 +58,7 @@ A journey experience system built upon storytelling. A simple way to create an e
 
 ### Project Structure
 ```
-astro-inferno/
+journey-foundryvtt/
 ├── scripts/
 │   ├── mysystem.mjs        # Main system initialization
 │   ├── actor/

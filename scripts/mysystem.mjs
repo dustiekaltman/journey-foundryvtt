@@ -11,7 +11,7 @@ import { DestinySheet } from './sheets/destiny-sheet.js';
 
 // System initialization
 Hooks.once('init', async function() {
-    console.log('Astro Inferno | Initializing Astro Inferno D20 System');
+    console.log('Journey | Initializing Journey D20 System');
 
     // Define custom document classes
     CONFIG.Actor.documentClass = AstroInfernoCharacter;
@@ -29,27 +29,27 @@ Hooks.once('init', async function() {
 
     // Register sheet classes
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("astro-inferno", CharacterSheet, {
+    Actors.registerSheet("journey-foundryvtt", CharacterSheet, {
         types: ["character"],
         makeDefault: true,
         label: "ASTRO.CharacterSheet"
     });
 
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("astro-inferno", FormSheet, {
+    Items.registerSheet("journey-foundryvtt", FormSheet, {
         types: ["form"],
         makeDefault: true,
         label: "ASTRO.FormSheet"
     });
     
-    Items.registerSheet("astro-inferno", DestinySheet, {
+    Items.registerSheet("journey-foundryvtt", DestinySheet, {
         types: ["destiny"],
         makeDefault: true,
         label: "ASTRO.DestinySheet"
     });
 
     // Register system settings
-    game.settings.register('astro-inferno', 'defaultStoryPoints', {
+    game.settings.register('journey-foundryvtt', 'defaultStoryPoints', {
         name: 'ASTRO.Settings.DefaultStoryPoints',
         hint: 'ASTRO.Settings.DefaultStoryPointsHint',
         scope: 'world',
@@ -70,11 +70,11 @@ Hooks.once('init', async function() {
 
     // Preload Handlebars templates
     const templatePaths = [
-        "systems/astro-inferno/templates/actor/character-sheet.html",
-        "systems/astro-inferno/templates/items/form-sheet.html",
-        "systems/astro-inferno/templates/items/destiny-sheet.html",
-        "systems/astro-inferno/templates/chat/story-point.html",
-        "systems/astro-inferno/templates/chat/story-point-spent.html"
+        "systems/journey-foundryvtt/templates/actor/character-sheet.html",
+        "systems/journey-foundryvtt/templates/items/form-sheet.html",
+        "systems/journey-foundryvtt/templates/items/destiny-sheet.html",
+        "systems/journey-foundryvtt/templates/chat/story-point.html",
+        "systems/journey-foundryvtt/templates/chat/story-point-spent.html"
     ];
     
     await loadTemplates(templatePaths);
@@ -110,7 +110,7 @@ Hooks.once('init', async function() {
 
 // Ready hook
 Hooks.once('ready', async function() {
-    console.log('Astro Inferno | System Ready');
+    console.log('Journey | System Ready');
 });
 
 // Export for use in other modules

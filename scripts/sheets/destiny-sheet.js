@@ -1,8 +1,8 @@
 export class DestinySheet extends ItemSheet {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["astro-inferno", "sheet", "item", "destiny"],
-            template: "systems/astro-inferno/templates/items/destiny-sheet.html",
+            classes: ["journey-foundryvtt", "sheet", "item", "destiny"],
+            template: "systems/journey-foundryvtt/templates/items/destiny-sheet.html",
             width: 520,
             height: 480,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]

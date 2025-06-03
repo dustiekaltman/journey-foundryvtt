@@ -1,6 +1,6 @@
 /* Character Sheet Specific Styles */
 
-.astro-inferno.sheet.actor.character {
+.journey-foundryvtt.sheet.actor.character {
     /* Character Header */
     .character-header {
         display: flex;
