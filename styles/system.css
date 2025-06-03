@@ -1,0 +1,161 @@
+/* Astro Inferno D20 System Styles */
+
+/* ----------------------------------------- */
+/*  All Astro Inferno                        */
+/* ----------------------------------------- */
+
+.astro-inferno {
+    /* Sheet Tabs */
+    .sheet-tabs {
+        flex: 0 0 40px;
+        border-top: 1px solid #AAA;
+        border-bottom: 1px solid #AAA;
+    }
+
+    .sheet-tabs .item {
+        line-height: 40px;
+        font-weight: bold;
+    }
+
+    .sheet-tabs .item.active {
+        text-decoration: underline;
+        text-shadow: 0 0 10px #FF6400;
+    }
+
+    /* Items List */
+    .items-list {
+        list-style: none;
+        margin: 7px 0;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .items-list .item-header {
+        font-weight: bold;
+    }
+
+    .items-list .item {
+        height: 30px;
+        line-height: 24px;
+        padding: 3px 0;
+        border-bottom: 1px solid #BBB;
+    }
+
+    .items-list .item .item-image {
+        flex: 0 0 24px;
+        height: 24px;
+        background-size: contain;
+        border: none;
+        margin-right: 5px;
+    }
+
+    .items-list .item img {
+        display: block;
+    }
+
+    .items-list .item-name {
+        margin: 0;
+    }
+
+    .items-list .item-controls {
+        flex: 0 0 86px;
+        text-align: right;
+    }
+
+    /* Attributes */
+    .attributes-header {
+        padding: 5px;
+        margin: 5px 0;
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid #AAA;
+        border-radius: 2px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .attribute-control {
+        flex: 0 0 20px;
+        text-align: center;
+        line-height: 28px;
+        border: none;
+    }
+
+    .attributes-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .attributes-list .attribute {
+        padding: 2px 0;
+        border-bottom: 1px solid #CCC;
+    }
+
+    /* Resource Bars */
+    .resource {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .resource-bar {
+        flex: 1;
+        height: 20px;
+        background: #DDD;
+        border: 1px solid #999;
+        border-radius: 3px;
+        margin: 0 5px;
+        position: relative;
+    }
+
+    .resource-bar-fill {
+        height: 100%;
+        background: #4CAF50;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    .resource-bar-fill.health {
+        background: #4CAF50;
+    }
+
+    .resource-bar-fill.story-points {
+        background: #2196F3;
+    }
+
+    /* Story Points */
+    .story-points {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .story-points .points-display {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    .story-points button {
+        margin: 0 5px;
+    }
+
+    /* Rollable */
+    .rollable {
+        cursor: pointer;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .rollable:hover {
+        color: #FF6400;
+        text-shadow: 0 0 10px #FF6400;
+    }
+
+    /* Editor */
+    .editor-content {
+        min-height: 150px;
+    }
+}

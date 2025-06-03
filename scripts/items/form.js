@@ -1,7 +1,7 @@
 /**
  * Form (Race) class for the game system
  */
-export class Form extends Item {
+export class AstroInfernoForm extends Item {
     /** @override */
     prepareData() {
         super.prepareData();

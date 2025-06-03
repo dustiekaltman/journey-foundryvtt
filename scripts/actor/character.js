@@ -1,7 +1,7 @@
 /**
  * Character class for the game system
  */
-export class Character extends Actor {
+export class AstroInfernoCharacter extends Actor {
     /** @override */
     prepareData() {
         super.prepareData();
@@ -65,7 +65,7 @@ export class Character extends Actor {
      */
     async rollCheck(attribute, modifier = 0) {
         const roll = new Roll("1d20");
-        await roll.evaluate();
+        await roll.evaluate({async: true});
         
         // Check for story point generation (e.g., on natural 20)
         if (roll.total === 20) {

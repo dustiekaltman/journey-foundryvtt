@@ -1,7 +1,7 @@
 /**
  * Destiny (Class) class for the game system
  */
-export class Destiny extends Item {
+export class AstroInfernoDestiny extends Item {
     /** @override */
     prepareData() {
         super.prepareData();

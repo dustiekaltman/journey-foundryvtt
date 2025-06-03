@@ -4,10 +4,28 @@ A journey experience system built upon storytelling. A simple way to create an e
 
 ## Features
 
-- D20-based system with Forms and Destinies
-- Story Points system for narrative control
-- Simple and intuitive character creation
-- Focus on storytelling and character development
+- **D20-based system** with Forms (Races) and Destinies (Classes)
+- **Story Points system** for narrative control and dramatic moments
+- **Simple character creation** with intuitive attribute system
+- **Focus on storytelling** and character development
+- **Fully compatible** with Foundry VTT v13
+
+## System Overview
+
+### Character Creation
+- Six core attributes: Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma
+- Forms represent character races/species with unique abilities and traits
+- Destinies represent character classes/professions with progressive features
+- Story Points for enhancing rolls and narrative control
+
+### Story Points
+- Gain story points through exceptional play (natural 20s)
+- Spend points to enhance rolls or trigger narrative effects
+- Integrated chat messages for story point transactions
+
+### Items
+- **Forms**: Character races with attribute bonuses and special abilities
+- **Destinies**: Character classes with level-based progression and features
 
 ## Installation
 
@@ -21,6 +39,51 @@ A journey experience system built upon storytelling. A simple way to create an e
 - Foundry VTT version 13 or higher
 - A modern web browser
 
+## Development
+
+### Project Structure
+```
+astro-inferno/
+├── scripts/
+│   ├── mysystem.mjs        # Main system initialization
+│   ├── actor/
+│   │   └── character.js    # Character Actor class
+│   ├── items/
+│   │   ├── form.js        # Form Item class
+│   │   └── destiny.js     # Destiny Item class
+│   ├── sheets/
+│   │   ├── character-sheet.js  # Character sheet implementation
+│   │   ├── form-sheet.js       # Form sheet implementation
+│   │   └── destiny-sheet.js    # Destiny sheet implementation
+│   └── dice/
+│       └── story-points.js # Story points system
+├── templates/
+│   ├── actor/
+│   │   └── character-sheet.html
+│   ├── items/
+│   │   ├── form-sheet.html
+│   │   └── destiny-sheet.html
+│   └── chat/
+│       ├── story-point.html
+│       └── story-point-spent.html
+├── styles/
+│   ├── system.css         # Core system styles
+│   └── character-sheet.css # Character sheet specific styles
+├── lang/
+│   └── en.json           # English translations
+├── packs/                # Compendium packs
+└── system.json          # System manifest
+```
+
+### Key Components
+
+- **AstroInfernoCharacter**: Extended Actor class for player characters
+- **AstroInfernoForm**: Item subclass for character races
+- **AstroInfernoDestiny**: Item subclass for character classes
+- **CharacterSheet**: ActorSheet implementation for character sheets
+- **FormSheet/DestinySheet**: ItemSheet implementations
+- **StoryPoints**: System for narrative control mechanics
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -29,6 +92,18 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+### Development Guidelines
+- Follow existing code style and conventions
+- Test changes in Foundry VTT v13
+- Update documentation for new features
+- Submit clear, focused pull requests
+
 ## Support
 
-For support, please open an issue on the GitHub repository. 
+For support, please open an issue on the GitHub repository.
+
+## Credits
+
+Created by Dustie Kaltman
+
+Special thanks to the Foundry VTT community for their support and guidance.
